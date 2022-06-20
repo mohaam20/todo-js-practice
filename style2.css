@@ -92,3 +92,10 @@ li p{max-width: 400px; border: 2px solid black ;}
     from {background-color: rgb(163, 233, 232);}
     to {background-color: rgb(255, 188, 111);}}
 
+@media only screen and (max-width: 600px) {
+    li{width: 100%;}
+    .todo-container{width: 80vw;}
+    form{width: 80vw;}
+    input {width: 100%;}
+    .alert{ left: 0;}
+    }
