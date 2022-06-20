@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0cm;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+
+}
+
+body{background-repeat: no-repeat; 
+    height: 100vh; color: rgb(255, 255, 255);
+     font-family: 'Kdam Thmor Pro', sans-serif;
+     animation: mymove 10s infinite ease alternate;
+     display: flex; flex-direction: column; align-items:center;
+    }
+
+header{font-size: 2rem;   -webkit-text-stroke: 3px rgb(0, 0, 0);
+}
+header, form{
+    
+    margin: 0.9rem;
+    width: 485px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem;
+    position: relative;
+    height: 4rem;;
+}
+
+form{box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.164);}
+
+form input ,form button{
+    border: none;
+    font-size: 2rem;
+    padding: 0.5rem;
+    height: 4rem;
+    
+}
+
+button{
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 50px;
+}
+
+form button:hover{
+    background-color: orangered;
+}
+
+li button:hover{
+    background-color: rgb(132, 0, 255);
+}
+
+
+.todo-container{min-height: 5rem; margin:2rem;
+    max-height: 26rem;
+    overflow: auto;
+}
+
+.todo-container *{display:flex;  border: none;
+    
+    font-size: 1rem;
+    }
+
+.todo-list{  background-color: rgba(0, 190, 196, 0); display:flex;
+     align-items: center; flex-direction: column; 
+      justify-content: space-around; padding:0  0.5rem;}
+
+li{ display:flex; justify-content: space-between; 
+     background-color: rgb(77, 233, 129); width: 100%; 
+      text-align: left; min-height: 4rem; width: 485px; margin: 0.5rem; padding: 0.5rem;
+       transition: all 0.8s ease-in-out ;   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.164);
+    }
+
+li p{max-width: 400px; border: 2px solid black ;}
+.todo-container li i{font-size: 1.5rem;}
+
+.allert{
+    width: 700px;
+}
+
+.alert{ position: absolute; left: 50%; width: fit-content; padding: 0 2rem; height: 100%;
+     background-color: red; align-items: center; display:
+      flex; z-index: -1; transition-timing-function:ease-out; }
+
+::-webkit-scrollbar{ display: none; }
+
+@keyframes mymove {
+    from {background-color: rgb(163, 233, 232);}
+    to {background-color: rgb(255, 188, 111);}}
+
