@@ -6,14 +6,20 @@
 
 }
 
+i{
+    pointer-events: none;
+    color: #4C3A51;
+}
+
 body{background-repeat: no-repeat; 
     height: 100vh; color: rgb(255, 255, 255);
      font-family: 'Kdam Thmor Pro', sans-serif;
-     animation: mymove 10s infinite ease alternate;
+     background-color: #4C3A51;
+     /* animation: mymove 10s infinite ease alternate; */
      display: flex; flex-direction: column; align-items:center;
     }
 
-header{font-size: 2rem;   -webkit-text-stroke: 3px rgb(0, 0, 0);
+header h1{font-size: 2rem;   -webkit-text-stroke: 1px rgb(0, 0, 0); text-transform: uppercase;
 }
 header, form{
     
@@ -22,7 +28,6 @@ header, form{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 0.5rem;
     position: relative;
     height: 4rem;;
 }
@@ -32,11 +37,11 @@ form{box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.164);}
 form input ,form button{
     border: none;
     font-size: 2rem;
-    padding: 0.5rem;
     height: 4rem;
     
 }
 
+form input{width: calc(100%); padding: 0 1rem;}
 button{
     cursor: pointer;
     transition: all 0.3s ease;
@@ -47,11 +52,11 @@ button{
 }
 
 form button:hover{
-    background-color: orangered;
+    background-color: #E7AB79;
 }
 
 li button:hover{
-    background-color: rgb(132, 0, 255);
+    background-color: #E7AB79;
 }
 
 
@@ -73,18 +78,38 @@ li{ display:flex; justify-content: space-between;
      background-color: rgb(77, 233, 129); width: 100%; 
       text-align: left; min-height: 4rem; width: 485px; margin: 0.5rem; padding: 0.5rem;
        transition: all 0.8s ease-in-out ;   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.164);
+       gap: 0 1rem;
     }
 
-li p{max-width: 400px; border: 2px solid black ;}
+li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
+}
 .todo-container li i{font-size: 1.5rem;}
 
 .allert{
     width: 700px;
 }
 
+
+
 .alert{ position: absolute; left: 50%; width: fit-content; padding: 0 2rem; height: 100%;
      background-color: red; align-items: center; display:
       flex; z-index: -1; transition-timing-function:ease-out; }
+
+.glass{opacity: 50%; }  
+
+.solid{opacity: 100%;}
+
+.falll{
+    transform: translatey(250px) rotateZ(20deg);
+    opacity: 0;
+    position: absolute;
+}
+.logout{ padding: 1rem; cursor: pointer; 
+    background-color: rgb(155, 0, 0); margin: 0 1rem; border: none; color: white;}
+.logout:hover{
+    background-color: brown;
+}    
+    
 
 ::-webkit-scrollbar{ display: none; }
 
@@ -97,5 +122,5 @@ li p{max-width: 400px; border: 2px solid black ;}
     .todo-container{width: 80vw;}
     form{width: 80vw;}
     input {width: 100%;}
-    .alert{ left: 0;}
+    .alert{ display: none;}
     }
