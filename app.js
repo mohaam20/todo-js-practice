@@ -15,7 +15,10 @@ function women(event){
     if (btnnn.className == "checkLogo" && panel.className == "solid" ){
         console.log("arrived")
     panel.classList.remove("solid")    
-    panel.classList.add("glass")}
+    panel.classList.add("glass")
+    dellLocal(panel.innerText)
+
+    }
     
     else if( btnnn.className === "dellLogo"){
         dellLocal(panel.innerText)
@@ -28,7 +31,8 @@ function women(event){
     else if(btnnn.className== "checkLogo" && panel.className == "glass"){
       panel.classList.remove("glass")
       panel.classList.add("solid")
-      console.log("through")      
+      console.log("through")  
+      saveLocal(panel.innerText)    
    }
 
 
