@@ -93,7 +93,7 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 .alert{ position: absolute; left: 50%; width: fit-content; padding: 0 2rem; height: 4rem;
      background-color: red; align-items: center; display:
-      flex; z-index: -1; transition-timing-function:ease-out; }
+      flex; z-index: -1; transition-timing-function:ease-out; width:10rem; }
 
 .glass{opacity: 50%; }  
 
