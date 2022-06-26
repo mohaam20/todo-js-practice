@@ -4,28 +4,26 @@ const todolist = document.querySelector(".todo-list")
 const allertms = document.querySelector(".alert")
 const kid = todobutton.parentNode
 
-
+window.addEventListener('DOMContentLoaded',readLocal)
 todobutton.addEventListener("click",addTodo)
 todolist.addEventListener("click",women,true)
 
-console.log(localStorage.getItem("todos"))
 
 function women(event){
     let btnnn = event.target
     let panel = btnnn.closest("li")
-    console.log(btnnn.className)
     if (btnnn.className == "checkLogo" && panel.className == "solid" ){
         console.log("arrived")
     panel.classList.remove("solid")    
     panel.classList.add("glass")}
     
     else if( btnnn.className === "dellLogo"){
+        dellLocal(panel.innerText)
         function bob(gestt){
             gestt.remove()
         }
         panel.classList.add("falll")
         setTimeout(bob,1000,panel)
-        console.log("arrived 2")
     }
     else if(btnnn.className== "checkLogo" && panel.className == "glass"){
       panel.classList.remove("glass")
@@ -102,11 +100,16 @@ localStorage.setItem('todos',JSON.stringify(todos));
 
 }
 
-function readLocal(sleeping){
+function readLocal(){
+    let sleeping = JSON.parse(localStorage.getItem('todos'))
+    console.log(sleeping[1])
+    sleeping.forEach(readKid);
+
+    function readKid(elong){
     const tsContainer = document.createElement("li")
     const task = document.createElement("p")
     const check = document.createElement("button")
-    const field = sleeping ;
+    const field = elong ;
     const kids = kid.children.length
     const dell = document.createElement("button")
 
@@ -120,12 +123,19 @@ function readLocal(sleeping){
     dell.classList.add("dellLogo")
     tsContainer.classList.add("solid")
     tsContainer.appendChild(task)
-    saveLocal(field)
     tsContainer.append(dell)
     tsContainer.append(check)
     todolist.appendChild(tsContainer);
+    }
     
 }
 
 
+function dellLocal(todo){
+let todo1 = JSON.parse(localStorage.getItem("todos"))
+let spot = todo1.indexOf(todo)
+console.log("place is " + spot)
+todo1.splice(spot,1)
+localStorage.setItem('todos',JSON.stringify(todo1));
 
+}
