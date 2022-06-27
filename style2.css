@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Fredoka+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200&family=Fredoka+One&family=Lalezar&display=swap');
+
+
 *{
     margin: 0;
     padding: 0cm;
@@ -8,23 +12,27 @@
 
 i{
     pointer-events: none;
-    color: #4C3A51;
+    color: #1363DF;
+}
+
+button:hover i{
+    color: white;
 }
 
 body{background-repeat: no-repeat; 
     height: 100vh; color: rgb(255, 255, 255);
-     font-family: 'Kdam Thmor Pro', sans-serif;
-     background-color: #4C3A51;
-     /* animation: mymove 10s infinite ease alternate; */
+    background-color: #06283D;
      display: flex; flex-direction: column; align-items:center;
     }
 
-header h1{font-size: 2rem;   -webkit-text-stroke: 1px rgb(0, 0, 0); text-transform: uppercase;
+header{margin: 2rem;}    
+
+header h1{font-size: 3rem;  letter-spacing: 0.1em; font-family: 'Fredoka One', cursive;
+    text-transform: uppercase;
 }
 header, form{
     
-    margin: 0.9rem;
-    width: 485px;
+    margin:  9.0 0 1.5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -32,17 +40,23 @@ header, form{
     height: 4rem;;
 }
 
-form{box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.164);}
 
 form input ,form button{
+    box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);
     border: none;
     font-size: 2rem;
     height: 4rem;
     
 }
 
-form input{width: calc(100%); padding: 0 1rem;}
+
+select{margin: 0 1rem 0 0; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333); height: 4rem; background-color: white; text-align: center; border-radius: 0.5rem ; cursor: pointer;
+font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; color: #0a6697;}
+option{cursor: pointer;}
+
+form input{ max-width:70% !important; padding: 0 0 0 1rem; border-radius: 0.5rem 0 0 0.5rem;}
 button{
+    border-radius: 00.5rem;
     cursor: pointer;
     transition: all 0.3s ease;
     display: flex;
@@ -51,12 +65,14 @@ button{
     width: 50px;
 }
 
+form button{  min-width: 50px !important; border-radius: 0 0.5rem 0.5rem 0; }
+
 form button:hover{
-    background-color: #E7AB79;
+    background-color: #1363DF;
 }
 
 li button:hover{
-    background-color: #E7AB79;
+    background-color: #1363DF;
 }
 
 
@@ -77,13 +93,18 @@ li button:hover{
 li{ display:flex; justify-content: space-between; 
      background-color: rgb(77, 233, 129); width: 100%; 
       text-align: left; min-height: 4rem; width: 485px; margin: 0.5rem; padding: 0.5rem;
-       transition: all 0.8s ease-in-out ;   box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.164);
+       transition: all 0.8s ease-in-out ;   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);
        gap: 0 1rem;
+       border-radius: 00.5rem ;
     }
 
 li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
+    font-family: 'Lalezar', cursive; letter-spacing: 0.1rem; margin: 0 0 0 1rem
+
 }
 .todo-container li i{font-size: 1.5rem;}
+
+
 
 .allert{
     width: 700px;
@@ -92,8 +113,8 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 
 .alert{ position: absolute; left: 50%; width: fit-content; padding: 0 2rem; height: 4rem;
-     background-color: red; align-items: center; display:
-      flex; z-index: -1; transition-timing-function:ease-out; width:10rem; }
+     background-color: red; align-items: center; 
+     display:flex; z-index: -1; transition-timing-function:ease-out; border-radius: 0 0.5rem 0.5rem 0; }
 
 .glass{opacity: 50%; }  
 
@@ -112,15 +133,36 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
     
 
 ::-webkit-scrollbar{ display: none; }
+.custom-shape-divider-bottom-1656348997 {
+    z-index: -1;
+    opacity: 50%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    height: 60%;
+}
 
-@keyframes mymove {
-    from {background-color: rgb(163, 233, 232);}
-    to {background-color: rgb(255, 188, 111);}}
+.custom-shape-divider-bottom-1656348997 svg {
+    position: relative;
+    display: block;
+    width: calc(147% + 1.3px);
+    height: 60%;
+}
+
+.custom-shape-divider-bottom-1656348997 .shape-fill {
+    fill: #0a6697;
+}
+
+
 
 @media only screen and (max-width: 600px) {
+
     li{width: 100%;}
     .todo-container{width: 80vw;}
-    form{width: 80vw;}
-    input {width: 100%;}
+    form{width: 80vw !important; flex-wrap: wrap-reverse; }
     .alert{ display: none;}
     }
