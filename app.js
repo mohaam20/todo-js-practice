@@ -2,12 +2,13 @@ const todoinput = document.querySelector(".todo-input")
 const todobutton = document.querySelector(".todo-button")
 const todolist = document.querySelector(".todo-list")
 const allertms = document.querySelector(".alert")
+const droped = document.querySelector("select")
 const kid = todobutton.parentNode
 
 window.addEventListener('DOMContentLoaded',readLocal)
 todobutton.addEventListener("click",addTodo)
 todolist.addEventListener("click",women,true)
-
+droped.addEventListener("click",filtter)
 
 function women(event){
     let btnnn = event.target
@@ -28,7 +29,7 @@ function women(event){
         panel.classList.add("falll")
         setTimeout(bob,1000,panel)
     }
-    else if(btnnn.className== "checkLogo" && panel.className == "glass"){
+    else if(btnnn.className== "checkLogo" && panel.className == "glass"){   
       panel.classList.remove("glass")
       panel.classList.add("solid")
       console.log("through")  
@@ -41,7 +42,7 @@ function women(event){
 
 
 function mate(frshed){
-    frshed.style.backgroundColor = "#B25068";
+    frshed.style.backgroundColor = "#47B5FF";
 }
 
 function addTodo(event){
@@ -69,6 +70,8 @@ function addTodo(event){
         tsContainer.append(dell)
         tsContainer.append(check)
         todolist.appendChild(tsContainer);
+        filtter()
+
         if(kids >= 3){
             allertms.style.left = "50%"
         }
@@ -141,5 +144,30 @@ let spot = todo1.indexOf(todo)
 console.log("place is " + spot)
 todo1.splice(spot,1)
 localStorage.setItem('todos',JSON.stringify(todo1));
+
+}
+
+
+function filtter(){
+    let due = droped.value
+    let kido = todolist.children
+
+    for(let kid of kido){
+        console.log(due)
+        console.log(kid.className)
+        console.log(due == kid.className)
+
+        if(due == kid.className ){
+         console.log("glasoo")   
+         kid.style.display ="flex"
+        }
+        else{
+            kid.style.display = "none"
+        }
+        if(due == "all"){
+            kid.style.display="flex"
+        }
+    }
+    
 
 }
