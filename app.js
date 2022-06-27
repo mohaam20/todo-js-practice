@@ -8,7 +8,7 @@ const kid = todobutton.parentNode
 window.addEventListener('DOMContentLoaded',readLocal)
 todobutton.addEventListener("click",addTodo)
 todolist.addEventListener("click",women,true)
-droped.addEventListener("click",filtter)
+droped.addEventListener("change",filtter)
 
 function women(event){
     let btnnn = event.target
