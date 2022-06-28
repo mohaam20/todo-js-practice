@@ -78,7 +78,7 @@ border: none;
 select:hover{background-color: #1363DF; color: white;}
 
 
-form input{ border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px);   float: left; overflow: hidden; }
+form input{ border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px); padding:0 0 0 1rem;   float: left; overflow: hidden; }
 button{
     border-radius: 00.5rem;
     cursor: pointer;
