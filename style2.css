@@ -10,6 +10,13 @@
 
 }
 
+.todo-iput{width: 22rem; max-width: 50vw;}
+.tops{
+    max-width: 90vw;
+    width: 485px;
+    display: flex;
+}
+
 i{
     pointer-events: none;
     color: #1363DF;
@@ -23,6 +30,7 @@ body{background-repeat: no-repeat;
     height: 100vh; color: rgb(255, 255, 255);
     background-color: #06283D;
      display: flex; flex-direction: column; align-items:center;
+     overflow-x: hidden;
     }
 
 header{margin: 2rem;}    
@@ -30,9 +38,8 @@ header{margin: 2rem;}
 header h1{font-size: 3rem;  letter-spacing: 0.1em; font-family: 'Fredoka One', cursive;
     text-transform: uppercase;
 }
-header, form{
+header{
     
-    margin:  9.0 0 1.5rem 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -40,21 +47,38 @@ header, form{
     height: 4rem;;
 }
 
+.form-pack{
+    width: calc(100% - 100px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 4rem;;
+    }
 
 form input ,form button{
     box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);
     border: none;
     font-size: 2rem;
     height: 4rem;
+    margin: 0px;
     
 }
 
 
-select{margin: 0 1rem 0 0; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333); height: 4rem; background-color: white; text-align: center; border-radius: 0.5rem ; cursor: pointer;
-font-family: Verdana, Geneva, Tahoma, sans-serif; font-weight: bold; color: #0a6697;}
-option{cursor: pointer;}
+select{margin: 0 1rem 0 0; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);
+     height: 4rem; background-color: white;
+      text-align: center;
+       border-radius: 0.5rem ; cursor: pointer;
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+ font-weight: bold; color: #0a6697;
+border: none;
+}
 
-form input{ max-width:70% !important; padding: 0 0 0 1rem; border-radius: 0.5rem 0 0 0.5rem;}
+select:hover{background-color: #1363DF; color: white;}
+
+
+form input{ border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px);   float: left; overflow: hidden; }
 button{
     border-radius: 00.5rem;
     cursor: pointer;
@@ -63,6 +87,7 @@ button{
     align-items: center;
     justify-content: center;
     width: 50px;
+    min-width: 50px;
 }
 
 form button{  min-width: 50px !important; border-radius: 0 0.5rem 0.5rem 0; }
@@ -77,7 +102,7 @@ li button:hover{
 
 
 .todo-container{min-height: 5rem; margin:2rem;
-    max-height: 26rem;
+    max-height: 25rem;
     overflow: auto;
 }
 
@@ -112,7 +137,7 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 
 
-.alert{ position: absolute; left: 50%; width: fit-content; padding: 0 2rem; height: 4rem;
+.alert{ position: absolute; left: 50%; width: fit-content;  height: 4rem;
      background-color: red; align-items: center; 
      display:flex; z-index: -1; transition-timing-function:ease-out; border-radius: 0 0.5rem 0.5rem 0; }
 
@@ -125,11 +150,7 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
     opacity: 0;
     position: absolute;
 }
-.logout{ padding: 1rem; cursor: pointer; 
-    background-color: rgb(155, 0, 0); margin: 0 1rem; border: none; color: white;}
-.logout:hover{
-    background-color: brown;
-}    
+
     
 
 ::-webkit-scrollbar{ display: none; }
@@ -143,14 +164,14 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
     overflow: hidden;
     line-height: 0;
     transform: rotate(180deg);
-    height: 60%;
+    height: 70%;
 }
 
 .custom-shape-divider-bottom-1656348997 svg {
     position: relative;
     display: block;
     width: calc(147% + 1.3px);
-    height: 60%;
+    height: 70%;
 }
 
 .custom-shape-divider-bottom-1656348997 .shape-fill {
@@ -163,6 +184,16 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
     li{width: 100%;}
     .todo-container{width: 80vw;}
-    form{width: 80vw !important; flex-wrap: wrap-reverse; }
     .alert{ display: none;}
+    .todo-iput{width: 200px; background-color: #1363DF;}
     }
+
+    
+    
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-bottom-1656379681 svg {
+        width: calc(147% + 1.3px);
+        height: 254px;
+    }
+}
