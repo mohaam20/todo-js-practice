@@ -81,7 +81,9 @@ border: none;
 select:hover{background-color: #1363DF; color: white;}
 
 
-form input{ border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px);   float: left; overflow: hidden; padding:0 0 0 1rem  ;}
+form input{
+     text-transform: capitalize;
+     border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px);   float: left; overflow: hidden; padding:0 0 0 1rem  ;}
 button{
     border-radius: 00.5rem;
     cursor: pointer;
@@ -129,8 +131,8 @@ li{ display:flex; justify-content: space-between;
     }
 
 li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
-    font-family: 'Lalezar', cursive; letter-spacing: 0.1rem; margin: 0 0 0 1rem
-
+    font-family: 'Lalezar', cursive; letter-spacing: 0.1rem; margin: 0 0 0 1rem;
+    text-transform: capitalize;
 }
 
 .edit-field{
