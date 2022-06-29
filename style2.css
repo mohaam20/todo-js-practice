@@ -12,9 +12,11 @@
 
 .todo-iput{width: 22rem; max-width: 50vw;}
 .tops{
+    justify-content: center;
     max-width: 90vw;
-    width: 485px;
+    width: 600px;
     display: flex;
+    margin-top: 2rem;
 }
 
 i{
@@ -30,7 +32,6 @@ body{background-repeat: no-repeat;
     height: 100vh; color: rgb(255, 255, 255);
     background-color: #06283D;
      display: flex; flex-direction: column; align-items:center;
-     overflow-x: hidden;
     }
 
 header{margin: 2rem;}    
@@ -39,7 +40,7 @@ header h1{font-size: 3rem;  letter-spacing: 0.1em; font-family: 'Fredoka One', c
     text-transform: uppercase;
 }
 header{
-    
+    margin: 2rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -48,7 +49,7 @@ header{
 }
 
 .form-pack{
-    width: calc(100% - 100px);
+    max-width: 70%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -73,12 +74,15 @@ select{margin: 0 1rem 0 0; box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);
 font-family: Verdana, Geneva, Tahoma, sans-serif;
  font-weight: bold; color: #0a6697;
 border: none;
+-webkit-appearance: none;
 }
+
+
 
 select:hover{background-color: #1363DF; color: white;}
 
 
-form input{ border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px); padding:0 0 0 1rem;   float: left; overflow: hidden; }
+form input{ border-radius: 0.5rem 0 0 0.5rem; width: calc(100%-50px);   float: left; overflow: hidden; padding:0 0 0 1rem  ;}
 button{
     border-radius: 00.5rem;
     cursor: pointer;
@@ -106,6 +110,7 @@ li button:hover{
     overflow: auto;
 }
 
+
 .todo-container *{display:flex;  border: none;
     
     font-size: 1rem;
@@ -116,6 +121,7 @@ li button:hover{
       justify-content: space-around; padding:0  0.5rem;}
 
 li{ display:flex; justify-content: space-between; 
+    position: relative;
      background-color: rgb(77, 233, 129); width: 100%; 
       text-align: left; min-height: 4rem; width: 485px; margin: 0.5rem; padding: 0.5rem;
        transition: all 0.8s ease-in-out ;   box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);
@@ -127,6 +133,13 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
     font-family: 'Lalezar', cursive; letter-spacing: 0.1rem; margin: 0 0 0 1rem
 
 }
+
+.edit-field{
+    border:#1363DF solid 2px;
+    height: 75%;
+    border-radius: 0.5rem;
+    padding:0 1rem;
+}
 .todo-container li i{font-size: 1.5rem;}
 
 
@@ -137,8 +150,8 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 
 
-.alert{ position: absolute; left: 50%; width: fit-content;  height: 4rem;
-     background-color: red; align-items: center; 
+.alert{ position: absolute;  width: fit-content;  height: 4rem;
+     background-color: red; align-items: center; padding: 1rem;
      display:flex; z-index: -1; transition-timing-function:ease-out; border-radius: 0 0.5rem 0.5rem 0; }
 
 .glass{opacity: 50%; }  
@@ -181,12 +194,13 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 
 @media only screen and (max-width: 600px) {
-
+    header{margin-top: 5rem;}
     li{width: 100%;}
     .todo-container{width: 80vw;}
-    .alert{ display: none;}
-    .todo-iput{width: 200px; background-color: #1363DF;}
+    .alert{ display: none; }
+    .edit-field{    max-width: 30%;
     }
+}
 
     
     
