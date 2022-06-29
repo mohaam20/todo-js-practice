@@ -11,7 +11,8 @@ const kid = todobutton.parentNode
 window.addEventListener('DOMContentLoaded',readLocal)
 todobutton.addEventListener("click",addTodo)
 todolist.addEventListener("click",women,true)
-droped.addEventListener("change",filtter)
+document.addEventListener("change",filtter)
+window.addEventListener("click",filtter)
 allField.addEventListener("keyup",enterSubmit)
 document.addEventListener("click",unFoucs)
 
