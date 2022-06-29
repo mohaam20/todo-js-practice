@@ -11,11 +11,12 @@ const kid = todobutton.parentNode
 window.addEventListener('DOMContentLoaded',readLocal)
 todobutton.addEventListener("click",addTodo)
 todolist.addEventListener("click",women,true)
-droped.addEventListener("click",filtter)
+droped.addEventListener("change",filtter)
 allField.addEventListener("keyup",enterSubmit)
 document.addEventListener("click",unFoucs)
 
 function women(event){
+    event.preventDefault()
     let btnnn = event.target
     let panel = btnnn.closest("li")
     
@@ -28,9 +29,11 @@ function women(event){
     closeField(panel)
     }
     else if((panel.nodeName == 'LI' && panel.className == "glass")){
-       
         panel.classList.remove("glass")
         panel.classList.add("solid")
+        saveLocal(panel.innerText)
+        closeField(panel)    
+
     }
 
     else if( btnnn.className === "dellLogo"){
