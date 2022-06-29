@@ -138,9 +138,10 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 .edit-field{
     border:#1363DF solid 2px;
-    height: 75%;
+    height: 77%;
     border-radius: 0.5rem;
     padding:0 1rem;
+    width: 57%;
 }
 .todo-container li i{font-size: 1.5rem;}
 
@@ -197,11 +198,15 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 @media only screen and (max-width: 600px) {
     header{margin-top: 5rem;}
-    li{width: 100%;}
+    li{width: 100%; flex-wrap: wrap; justify-content: space-between;}
     .todo-container{width: 80vw;}
     .alert{ display: none; }
-    .edit-field{    max-width: 30%;
+    .edit-field{  width: 90%;
+        height:calc(100% - 5rem);
     }
+    p{justify-self: left; align-self: flex-end; width: 90%;}
+    
+    button{height: 50px;margin: 0.5rem; }    
 }
 
     
