@@ -28,13 +28,14 @@ function women(event){
     panel.classList.add("glass")
     dellLocal(panel.innerText)
     closeField(panel)
+    lower(panel)
     }
     else if((panel.nodeName == 'LI' && panel.className == "glass")){
         panel.classList.remove("glass")
         panel.classList.add("solid")
         saveLocal(panel.innerText)
         closeField(panel)    
-
+        comeBack(panel)
     }
 
     else if( btnnn.className === "dellLogo"){
@@ -55,11 +56,11 @@ function women(event){
    else if(btnnn.className == "editor"){
     editTask(panel)
     console.log(btnnn.innerHTML)
-    if(btnnn.innerHTML == '<i class="fa-solid fa-wrench"></i>'){
+    if(btnnn.innerHTML == '<i class="fa-solid fa-pen"></i>'){
         btnnn.innerHTML = '<i class="fas fa-archive"></i>'
     }
     else{
-        btnnn.innerHTML = '<i class="fa-solid fa-wrench"></i>'
+        btnnn.innerHTML = '<i class="fa-solid fa-pen"></i>'
     }
    }
 
@@ -92,7 +93,7 @@ function addTodo(event){
         editField.style.position = "absolute"
         check.innerHTML = '<i class="fa-solid fa-check"></i>'
         dell.innerHTML='<i class="fa-solid fa-trash"></i>'
-        edit.innerHTML='<i class="fa-solid fa-wrench"></i>'
+        edit.innerHTML='<i class="fa-solid fa-pen"></i>'
         check.classList.add("checkLogo")
         dell.classList.add("dellLogo")
         edit.classList.add('editor')
@@ -155,7 +156,7 @@ function readLocal(){
     task.innerHTML = field
     check.innerHTML = '<i class="fa-solid fa-check"></i>'
     dell.innerHTML='<i class="fa-solid fa-trash"></i>'
-    edit.innerHTML='<i class="fa-solid fa-wrench"></i>'
+    edit.innerHTML='<i class="fa-solid fa-pen"></i>'
 
     check.classList.add("checkLogo")
     edit.classList.add('editor')
@@ -247,6 +248,9 @@ function closeField(father){
                 father.remove()
             }    
         }
+        if(x.className == "editor"){
+            x.innerHTML = '<i class="fa-solid fa-pen"></i>'
+        }
         
     }
     
@@ -274,11 +278,31 @@ function enterSubmit(event){
 
 function unFoucs(event){
     let opend = document.querySelectorAll(".edit-field")
-
-    if(event.target.nodeName == "BODY" || event.target.nodeName == "UL"){
+    let boxes = document.querySelectorAll(".editor")
+    if(event.target.nodeName == "BODY" || event.target.nodeName == "UL" || event.target.nodeName == "LI"){
         console.log(event.target.nodeName)
         for(let i of opend){
             i.style.display = "none"
         }
+        for(let t of boxes){
+            t.innerHTML = '<i class="fa-solid fa-pen"></i>' 
+        }
     }
+}
+
+function lower(tail){
+  let panelG = document.querySelector("ul")
+  let place = tail
+  tail.remove()
+  panelG.append(place)
+  console.log(panelG)
+  console.log(tail)
+}
+
+function comeBack(taill){
+  let panelG = document.querySelector("ul")
+  let placee = taill
+  taill.remove()
+  panelG.insertBefore(placee,panelG.children[0])
+  
 }

@@ -66,17 +66,19 @@ form input ,form button{
     
 }
 
-.select{position: relative; background-color: rebeccapurple; margin-right: 1rem;}
+.select{position: relative;  margin-right: 1rem;}
 
 select{ box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.333);
      height: 4rem; background-color: white;
-      text-align: center;
+      text-align: left;
+      text-transform: capitalize;
        border-radius: 0.5rem ; cursor: pointer;
 font-family: Verdana, Geneva, Tahoma, sans-serif;
  font-weight: bold; color: #0a6697;
 border: none;
 appearance: none;
-padding-right: 1rem;
+padding-right: 1.5rem;
+padding-left: 1rem;
 }
 
 .custom-arrow{top:0; right: 0; display: block;
@@ -145,7 +147,7 @@ li{ display:flex; justify-content: space-between;
 li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
     font-family: 'Lalezar', cursive; letter-spacing: 0.1rem; margin: 0 0 0 1rem;
     text-transform: capitalize;
-    word-break: break-all;
+    word-wrap: break-word;
 }
 
 .edit-field{
@@ -208,9 +210,9 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
 
 
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 767px) {
     header{margin-top: 5rem;}
-    li{width: 100%; flex-wrap: wrap; justify-content: space-between;}
+    li{width: 100%; flex-wrap: wrap; justify-content: center;}
     .todo-container{width: 80vw;}
     .alert{ display: none; }
     .edit-field{  width: 90%;
