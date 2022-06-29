@@ -204,7 +204,7 @@ li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
     .edit-field{  width: 90%;
         height:calc(100% - 5rem);
     }
-    p{justify-self: left; align-self: flex-end; width: 90%;}
+    p{justify-self: left; align-self: flex-end; width: 90%; min-height: 4rem; align-items: center;}
     
     button{height: 50px;margin: 0.5rem; }    
 }
