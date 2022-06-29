@@ -133,6 +133,7 @@ li{ display:flex; justify-content: space-between;
 li p{max-width: 400px; border: 2px solid black ;   flex-grow: 2;
     font-family: 'Lalezar', cursive; letter-spacing: 0.1rem; margin: 0 0 0 1rem;
     text-transform: capitalize;
+    word-break: break-all;
 }
 
 .edit-field{
