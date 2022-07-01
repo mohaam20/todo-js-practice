@@ -10,13 +10,6 @@
 
 }
 
-
-.todo-container{
-    position: relative;
-    min-height: 20rem !important;
-    min-width: 485px;
-}
-
 .todo-iput{width: 22rem; max-width: 50vw;}
 .tops{
     justify-content: center;
@@ -39,7 +32,6 @@ body{background-repeat: no-repeat;
     height: 100vh; color: rgb(255, 255, 255);
     background-color: #06283D;
      display: flex; flex-direction: column; align-items:center;
-     overflow-y: hidden;
     }
 
 header{margin: 2rem;}    
@@ -221,32 +213,17 @@ li p{ border: 2px solid black ;   flex-grow: 2;
 
 
 
-.searchh{font-size: 2rem; display: flex; flex-direction: row-reverse; gap: 1rem; align-items: center; max-width: 70vw;}
-.searchh input{border-radius: 0.5rem; height: 3rem; width: 20rem; appearance: none; border: none; padding: 0 2rem;}
-.searchh label{background-color: white; height: 100%; width: 3rem;
-     display: flex; justify-content: center;cursor: pointer;
-      align-items: center; border-radius: 0.5rem;}
-.searchh label:hover{ background-color: #1363DF;}
-.searchh label:hover i{color: white;}
-
-
-.shide{
-    display: none;
-}
-
 @media only screen and (max-width: 767px) {
     header{margin-top: 5rem;}
     li{width: 100%; flex-wrap: wrap; justify-content: center;}
-    .todo-container{width: 80vw; min-width: auto !important;}
+    .todo-container{width: 80vw;}
     .alert{ display: none; }
     .edit-field{  width: 90%;
         height:calc(100% - 5rem);
     }
     p{justify-self: left; align-self: flex-end; width: 90%; min-height: 4rem; align-items: center;}
     
-    button{height: 50px;margin: 0.5rem; } 
-    
-    .searchh label{padding: 0 1rem; }
+    button{height: 50px;margin: 0.5rem; }    
 }
 
     
